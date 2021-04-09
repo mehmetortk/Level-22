@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using Entities.Abstract;
-
-namespace DataAccess.Abstract
+//core katmanı diğer katmanları referans almaz diğer katmanlara bağımlı değildir evrensel ve bağımsızdır.
+//core katmanı sayesinde repositoryler diğer databaselerde ve katmanlarda da kullanılabilir
+namespace Core.DataAccess
 {
 
 /*reason why we use (where T:class) is we don't want any type of thing can be used with T, we only want the ones with references
